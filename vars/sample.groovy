@@ -1,11 +1,11 @@
-def newGit (repo)
-{
-  git "${repo}"
+def newGit(repo) {
+    git "${repo}"
 }
-def build ()
-{
-  sh 'mvn clean install'
+
+def build() {
+    sh 'mvn clean install'
 }
+
 
   
   
