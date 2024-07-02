@@ -1,5 +1,8 @@
-def newGit(repo) {
-    git "${repo}"
+def newGit(repo, branch) {
+    checkout([$class: 'GitSCM',
+        branches: [[name: "*/${branch}"]],
+        userRemoteConfigs: [[url: repo]]
+    ])
 }
 
 def build() {
